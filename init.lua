@@ -1,40 +1,40 @@
-require('basics')
-require('colors')
-require('telescope-config')
-require('coc-config')
-require('discord-presence')
+ require('basics')
+ require('colors')
+ require('telescope-config')
+ require('coc-config')
+ require('discord-presence')
 
-require'autosave'.setup
-{
-    enabled = true,
-    execution_message = "AutoSave: saved at " .. vim.fn.strftime("%H:%M:%S"),
-    events = {"InsertLeave", "TextChanged"},
-    conditions = {
-        exists = true,
-        filename_is_not = {},
-        filetype_is_not = {},
-        modifiable = true
+
+ -- require'autosave'.setup
+ -- {
+ --     enabled = true,
+ --     execution_message = "AutoSave: saved at " .. vim.fn.strftime("%H:%M:%S"),
+ --     events = {"InsertLeave", "TextChanged"},
+ --     conditions = {
+ --         exists = true,
+ --         filename_is_not = {},
+ --         filetype_is_not = {},
+ --         modifiable = true
+ --     },
+ --     write_all_buffers = false,
+ --     on_off_commands = true,
+ --     clean_command_line_interval = 0,
+ --     debounce_delay = 135
+ -- }
+  require'nvim-treesitter.configs'.setup {
+    ensure_installed = "all",
+    ignore_install = { "phpdoc" },
+    context_commentstring = {
+      enable = true
     },
-    write_all_buffers = false,
-    on_off_commands = true,
-    clean_command_line_interval = 0,
-    debounce_delay = 135
-}
-
- require'nvim-treesitter.configs'.setup {
-   ensure_installed = "all",
-   ignore_install = { "phpdoc" },
-   context_commentstring = {
-     enable = true
-   },
-   highlight = {
-     enable = true,
-     disable = { "lua" }
-   },
-   indent = {
-     enable = true
-   }
- }
+    highlight = {
+      enable = true,
+      disable = { "lua" }
+    },
+    indent = {
+      enable = true
+    }
+  }
 
 return require('packer').startup(function()
   -- plugin manager in lua
@@ -58,29 +58,22 @@ return require('packer').startup(function()
   use 'nvim-treesitter/nvim-treesitter'
   use 'tpope/vim-commentary'
   use 'JoosepAlviste/nvim-ts-context-commentstring'
-  use 'lukas-reineke/indent-blankline.nvim'
   use {
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+
   use 'andweeb/presence.nvim'
 
   -- lsp
   use {'neoclide/coc.nvim', branch = 'release'}
-  -- for python
-  -- use { 'davidhalter/jedi-vim' }
-  -- use { 'zchee/deoplete-jedi' }
-
-  -- for javascript
-  -- use { 'yuezk/vim-js' }
-  -- use { 'HerringtonDarkholme/yats.vim' }
-  -- use { 'maxmellon/vim-jsx-pretty' }
 
   -- file browser
   use { "nvim-telescope/telescope-file-browser.nvim" }
 
   -- autosave
-  use "Pocco81/AutoSave.nvim"
+  -- use { "Pocco81/AutoSave.nvim" }
+  use { "Pocco81/true-zen.nvim" }
 
   -- surround bracket etc
   use {
@@ -104,3 +97,4 @@ return require('packer').startup(function()
     end
   }
 end)
+
