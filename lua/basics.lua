@@ -13,7 +13,7 @@ vim.o.splitbelow = true
 vim.o.splitright = true
 vim.o.scrolloff = 3
 vim.o.errorbells = false
-vim.o.shiftwidth = 2
+vim.o.shiftwidth = 4
 vim.o.numberwidth = 4
 vim.o.termguicolors = true
 vim.o.colorcolumn = '80'
@@ -36,7 +36,7 @@ vim.api.nvim_set_keymap('n', 'tk', ':tabnext<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', 'tj', ':tabprev<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', 'to', ':tabo<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-S>', ':%s/', { noremap = true })
-vim.api.nvim_set_keymap("n", "<leader>t", ":sp<CR> :term<CR> :resize 20N<CR> i", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>t", ":sp<CR> :term<CR> :resize 40N<CR> i", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap('i', 'jk', '<Esc>', {}) -- to esc with jk 
 
