@@ -33,12 +33,6 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  -- nvim-tree lua
-  use {
-      'kyazdani42/nvim-web-devicons', -- optional, for file icons
-    -- tag = 'nightly' -- optional, updated every week. (see issue #1193)
-  }
-
   -- colorschemes
   use 'rafi/awesome-vim-colorschemes'
 
