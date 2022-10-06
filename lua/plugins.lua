@@ -1,4 +1,5 @@
 local use = require('packer').use
+
 return require('packer').startup(function(use)
 
   -- plugin manager in lua
@@ -6,7 +7,6 @@ return require('packer').startup(function(use)
 
   -- autopairs
   use 'jiangmiao/auto-pairs'
---
   use {'nvim-treesitter/nvim-treesitter',
     require'nvim-treesitter.configs'.setup {
 
@@ -48,7 +48,7 @@ return require('packer').startup(function(use)
   use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
   use 'L3MON4D3/LuaSnip' -- Snippets plugin
   use 'jose-elias-alvarez/null-ls.nvim' -- null-ls
-  use 'MunifTanjim/prettier.nvim' -- prettiekjr
+  use 'MunifTanjim/prettier.nvim' -- prettiek
 
   -- file browser
   use { "nvim-telescope/telescope-file-browser.nvim" }
@@ -74,6 +74,22 @@ return require('packer').startup(function(use)
     }
     end
   }
+
+  use 'kyazdani42/nvim-web-devicons'
+  
+    
+  -- nvim tree
+  -- Unless you are still migrating, remove the deprecated commands from v1.x
+  vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
+  use {
+    "nvim-neo-tree/neo-tree.nvim",
+      branch = "v2.x",
+      requires = { 
+        "nvim-lua/plenary.nvim",
+        "kyazdani42/nvim-web-devicons",
+        "MunifTanjim/nui.nvim",
+      }
+    }
 
   -- use {"github/copilot.vim"}
 
