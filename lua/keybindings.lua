@@ -1,14 +1,28 @@
+-- custom keybindings
+vim.api.nvim_set_keymap('n', 'vs', ':vs<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', 'sp', ':sp<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-L>', '<C-W><C-L>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-H>', '<C-W><C-H>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-K>', '<C-W><C-K>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-J>', '<C-W><C-J>', { noremap = true })
+vim.api.nvim_set_keymap('n', 'tn', ':tabnew<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', 'tk', ':tabnext<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', 'tj', ':tabprev<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', 'to', ':tabo<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-S>', ':%s/', { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>t", ":sp<CR> :term<CR> :resize 20N<CR> i", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap('i', 'jk', '<Esc>', {}) -- to esc with jk 
+
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
-local lspconfig = require('lspconfig')
-
 -- luasnip setup
-local luasnip = require 'luasnip'
+local luasnip = require('luasnip')
 
--- nvim-cmp setup
-local cmp = require 'cmp'
+-- nvim-cmp keybinding setup
+local cmp = require('cmp')
 cmp.setup {
   snippet = {
     expand = function(args)
@@ -47,3 +61,4 @@ cmp.setup {
     { name = 'luasnip' },
   },
 }
+
