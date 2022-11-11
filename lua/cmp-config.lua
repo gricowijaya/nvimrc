@@ -1,5 +1,6 @@
-local cmp = require("cmp")
+local cmp = require('cmp')
 
+-- icons for nvim-cmp
 local kind_icons = {
   Text = "",
   Method = "",
@@ -28,6 +29,7 @@ local kind_icons = {
   TypeParameter = ""
 }
 
+-- nvim-cmp formating setup
 cmp.setup {
   formatting = {
     format = function(entry, vim_item)
