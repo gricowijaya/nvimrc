@@ -17,7 +17,6 @@ return require('packer').startup(function(use)
     -- discord presence
     use 'andweeb/presence.nvim'
     -- lsp config
-    use 'onsails/lspkind.nvim'
     use 'nvim-lua/completion-nvim'
     use 'williamboman/nvim-lsp-installer'
     use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
@@ -33,7 +32,7 @@ return require('packer').startup(function(use)
     -- add coc for formatting files
     -- use {'neoclide/coc.nvim', branch = 'release'}
     -- surround bracket etc
-    -- use "ur4ltz/surround.nvim"
+    use "ur4ltz/surround.nvim"
     -- devicons
     use 'kyazdani42/nvim-web-devicons'
     -- nvim tree
