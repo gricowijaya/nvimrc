@@ -38,5 +38,7 @@ return require('packer').startup(function(use)
     -- nvim tree
     use 'nvim-tree/nvim-tree.lua'
     -- use "github/copilot.vim"
+    -- Gitsigns
+    use 'lewis6991/gitsigns.nvim'
 end)
 
