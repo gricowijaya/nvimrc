@@ -31,4 +31,3 @@ vim.o.t_Co = 256
 
 -- colorscheme
 vim.cmd([[colorscheme onedark]])
-
