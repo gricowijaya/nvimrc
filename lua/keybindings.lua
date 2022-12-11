@@ -15,6 +15,7 @@ vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", opts)
 vim.api.nvim_set_keymap('i', 'jk', '<Esc>', opts) -- to esc with jk
 vim.api.nvim_set_keymap('n', '<C-d>', '<C-d>zz', opts) -- to esc with jk
 vim.api.nvim_set_keymap('n', '<C-u>', '<C-u>zz', opts) -- to esc with jk
+vim.api.nvim_set_keymap('n', '<C-N>', ":NvimTreeToggle<CR>", opts) -- remap Ctrl+n for using the mapping for nvim-tree
 
 -- vim keybinding movement through the buffer
 vim.api.nvim_set_keymap('n', '<C-L>', '<C-W><C-L>', opts)

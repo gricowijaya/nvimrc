@@ -56,4 +56,3 @@ require("nvim-tree").setup({
         },
     },
 })
-vim.api.nvim_set_keymap('n', '<C-N>', ":NvimTreeToggle<CR>", { noremap = true }) -- remap Ctrl+n for using the mapping for nvim-tree
