@@ -31,6 +31,10 @@ local kind_icons = {
 
 -- nvim-cmp formating setup
 cmp.setup {
+    window = {
+      completion = cmp.config.window.bordered(),
+      documentation = cmp.config.window.bordered(),
+    },
   formatting = {
     format = function(entry, vim_item)
       -- Kind icons

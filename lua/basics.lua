@@ -4,9 +4,9 @@ vim.g.loaded_netrwPlugin = 1
 
 -- basic settings
 vim.g.mapleader = " "
-vim.g.neovide_fullscreen = true
-vim.g.neovide_scale_factor = 0.8
-vim.o.guifont = "agave NFM r"
+vim.g.neovide_fullscreen = false
+vim.g.neovide_scale_factor = 0.90
+vim.o.guifont = "FiraCode-NF:h11"
 vim.o.number = true
 vim.o.relativenumber = true -- relativenumber
 vim.o.wrap = false
