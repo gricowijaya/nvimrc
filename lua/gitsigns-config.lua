@@ -1,16 +1,16 @@
 require('gitsigns').setup {
   signs = {
-    add          = { hl = 'GitSignsAdd'   , text = '│', numhl='GitSignsAddNr'   , linehl='GitSignsAddLn'    },
-    change       = { hl = 'GitSignsChange', text = '│', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn' },
-    delete       = { hl = 'GitSignsDelete', text = '_', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn' },
-    topdelete    = { hl = 'GitSignsDelete', text = '‾', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn' },
-    changedelete = { hl = 'GitSignsChange', text = '~', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn' },
-    untracked    = { hl = 'GitSignsAdd'   , text = '┆', numhl='GitSignsAddNr'   , linehl='GitSignsAddLn'    },
+    add          = { hl = 'GitSignsAdd', text = '│', numhl = 'GitSignsAddNr', linehl = 'GitSignsAddLn' },
+    change       = { hl = 'GitSignsChange', text = '│', numhl = 'GitSignsChangeNr', linehl = 'GitSignsChangeLn' },
+    delete       = { hl = 'GitSignsDelete', text = '_', numhl = 'GitSignsDeleteNr', linehl = 'GitSignsDeleteLn' },
+    topdelete    = { hl = 'GitSignsDelete', text = '‾', numhl = 'GitSignsDeleteNr', linehl = 'GitSignsDeleteLn' },
+    changedelete = { hl = 'GitSignsChange', text = '~', numhl = 'GitSignsChangeNr', linehl = 'GitSignsChangeLn' },
+    untracked    = { hl = 'GitSignsAdd', text = '┆', numhl = 'GitSignsAddNr', linehl = 'GitSignsAddLn' },
   },
-  signcolumn = true,  -- Toggle with `:Gitsigns toggle_signs`
-  numhl      = false, -- Toggle with `:Gitsigns toggle_numhl`
-  linehl     = false, -- Toggle with `:Gitsigns toggle_linehl`
-  word_diff  = false, -- Toggle with `:Gitsigns toggle_word_diff`
+  signcolumn = true, -- Toggle with `:Gitsigns toggle_signs`
+  numhl = false, -- Toggle with `:Gitsigns toggle_numhl`
+  linehl = false, -- Toggle with `:Gitsigns toggle_linehl`
+  word_diff = false, -- Toggle with `:Gitsigns toggle_word_diff`
   watch_gitdir = {
     interval = 1000,
     follow_files = true
@@ -52,17 +52,17 @@ require('gitsigns').setup {
       if vim.wo.diff then return ']c' end
       vim.schedule(function() gs.next_hunk() end)
       return '<Ignore>'
-    end, {expr=true})
+    end, { expr = true })
 
     map('n', '[c', function()
       if vim.wo.diff then return '[c' end
       vim.schedule(function() gs.prev_hunk() end)
       return '<Ignore>'
-    end, {expr=true})
+    end, { expr = true })
 
     -- Actions
-    map({'n', 'v'}, '<leader>sh', ':Gitsigns stage_hunk<CR>')
-    map({'n', 'v'}, '<leader>rh', ':Gitsigns reset_hunk<CR>')
+    map({ 'n', 'v' }, '<leader>sh', ':Gitsigns stage_hunk<CR>')
+    map({ 'n', 'v' }, '<leader>rh', ':Gitsigns reset_hunk<CR>')
     map('n', '<leader>Sh', gs.stage_buffer)
     map('n', '<leader>uh', gs.undo_stage_hunk)
     map('n', '<leader>Rb', gs.reset_buffer)
@@ -71,9 +71,9 @@ require('gitsigns').setup {
     map('n', '<leader>dh', gs.diffthis)
     map('n', '<leader>Dh', function() gs.diffthis('~') end)
     map('n', '<leader>dt', gs.toggle_deleted)
-    map('n', '<leader>bl', function() gs.blame_line{full=false} end)
+    map('n', '<leader>bl', function() gs.blame_line { full = false } end)
 
     -- Text object
-    map({'o', 'x'}, '<leader>ih', ':<C-U>Gitsigns select_hunk<CR>')
+    map({ 'o', 'x' }, '<leader>ih', ':<C-U>Gitsigns select_hunk<CR>')
   end
 }
