@@ -37,4 +37,6 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-tree.lua'
   -- Gitsigns
   use 'lewis6991/gitsigns.nvim'
+  -- Zen Mode
+  use 'folke/zen-mode.nvim'
 end)
