@@ -10,7 +10,7 @@ vim.api.nvim_set_keymap('n', 'tk'          , ':tabnext<CR>', opts) -- navigate t
 vim.api.nvim_set_keymap('n', 'tj'          , ':tabprev<CR>', opts) -- navigate to previous tab
 vim.api.nvim_set_keymap('n', 'to'          , ':tabo<CR>', opts) -- only one tab
 vim.api.nvim_set_keymap('n', '<C-S>'       , ':%s/', opts) -- find and replace
-vim.api.nvim_set_keymap('n', '<leader>t'   , ':sp<CR> :term<CR> :resize 10N<CR> i', opts) -- open terminal
+vim.api.nvim_set_keymap('n', '<leader>t'   , ':vs<CR> :terminal<CR> i', opts) -- open terminal
 vim.api.nvim_set_keymap('t', '<Esc>'       , '<C-\\><C-n>', opts)
 vim.api.nvim_set_keymap('i', 'jk'          , '<Esc>', opts) -- to esc with jk
 vim.api.nvim_set_keymap('n', '<C-d>'       , '<C-d>zz', opts) -- to esc with jk
