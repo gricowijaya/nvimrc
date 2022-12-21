@@ -29,7 +29,8 @@ local on_attach = function(client, bufnr)
   -- buf_set_keymap('n', '[d'        , '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
   -- buf_set_keymap('n', ']d'        , '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
   -- buf_set_keymap('n', '<space>q'  , '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
-  buf_set_keymap('n', 'gcc', '<cmd>terminal gcc -o main; ./main<CR>', opts) -- code documentation
+  buf_set_keymap('n', 'gcc', '<cmd>terminal gcc main.c -o main; ./main<CR>', opts) -- code documentation
+  buf_set_keymap('n', 'g++', '<cmd>terminal g++ main.cpp -o main; ./main<CR>', opts) -- code documentation
   buf_set_keymap('n', 'ggo', '<cmd>terminal go run main.go<CR>', opts) -- code documentation
   buf_set_keymap('n', 'ggt', '<cmd>terminal go test -v ./...<CR>', opts) -- code documentation
   buf_set_keymap('n', 'gnd', '<cmd>terminal npm run dev<CR>', opts) -- code documentation
