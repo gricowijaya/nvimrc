@@ -30,6 +30,5 @@ vim.o.signcolumn                = 'yes'
 vim.o.mouse                     = 'a' -- settings for mouse
 vim.o.clipboard                 = 'unnamedplus' -- for using the yank to the clipboard
 vim.o.t_Co                      = 256
-
 -- colorscheme
-vim.cmd([[colorscheme onedark]])
+vim.cmd([[colorscheme onehalflight]])
