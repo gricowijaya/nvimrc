@@ -10,3 +10,4 @@ require('surround-config')
 require('gitsigns-config')
 require('discord-presence')
 require('zen-mode-config')
+require('lualine-config');

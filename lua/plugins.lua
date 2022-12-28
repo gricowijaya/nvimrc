@@ -39,4 +39,9 @@ return require('packer').startup(function(use)
   use 'lewis6991/gitsigns.nvim'
   -- Zen Mode
   use 'folke/zen-mode.nvim'
+  -- lua line
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
 end)
