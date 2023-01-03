@@ -3,10 +3,13 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   -- autopairs
   use 'jiangmiao/auto-pairs'
+  -- treesitter for comments and lsp
   use 'nvim-treesitter/nvim-treesitter'
+  -- comments settings
   use 'tpope/vim-commentary'
   use 'JoosepAlviste/nvim-ts-context-commentstring'
   use 'lukas-reineke/indent-blankline.nvim'
+  -- telescope settings
   use {
     'nvim-telescope/telescope.nvim',
     requires = { { 'nvim-lua/plenary.nvim' } }

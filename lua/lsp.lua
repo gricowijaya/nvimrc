@@ -25,15 +25,15 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', 'gwl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
   buf_set_keymap('n', 'grn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
   buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-  -- buf_set_keymap('n', 'ge', '<cmd>lua vim.lsp.diagnostic.get_line_diagnostics()<CR>', opts)
-  -- buf_set_keymap('n', '[d'        , '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
-  -- buf_set_keymap('n', ']d'        , '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
-  -- buf_set_keymap('n', '<space>q'  , '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
   buf_set_keymap('n', 'gcc', '<cmd>terminal gcc main.c -o main; ./main<CR>', opts) -- code documentation
   buf_set_keymap('n', 'g++', '<cmd>terminal g++ main.cpp -o main; ./main<CR>', opts) -- code documentation
   buf_set_keymap('n', 'ggo', '<cmd>terminal go run main.go<CR>', opts) -- code documentation
   buf_set_keymap('n', 'ggt', '<cmd>terminal go test -v ./...<CR>', opts) -- code documentation
   buf_set_keymap('n', 'gnd', '<cmd>terminal npm run dev<CR>', opts) -- code documentation
+  -- buf_set_keymap('n', 'ge', '<cmd>lua vim.lsp.diagnostic.get_line_diagnostics()<CR>', opts)
+  -- buf_set_keymap('n', '[d'        , '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
+  -- buf_set_keymap('n', ']d'        , '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
+  -- buf_set_keymap('n', '<space>q'  , '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
 
   -- Set some keybinds conditional on server capabilities
   if client.resolved_capabilities.document_formatting then
