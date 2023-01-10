@@ -1,9 +1,11 @@
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
+  open_on_setup = true,
   view = {
     relativenumber = true,
-    adaptive_size = true,
+    adaptive_size = false,
     side = "right",
+    width = 30,
     mappings = {
       list = {
         { key = "u", action = "dir_up" },
@@ -56,3 +58,6 @@ require("nvim-tree").setup({
     },
   },
 })
+
+-- open nvim tree when it's
+vim.api.nvim_tree_auto_open = 1
