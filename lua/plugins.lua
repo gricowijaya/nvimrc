@@ -36,6 +36,8 @@ return require('packer').startup(function(use)
   use "ur4ltz/surround.nvim"
   -- devicons
   use 'kyazdani42/nvim-web-devicons'
+  -- lazygit
+  use 'kdheepak/lazygit.nvim'
   -- nvim tree
   use 'nvim-tree/nvim-tree.lua'
   -- Gitsigns
@@ -59,5 +61,3 @@ return require('packer').startup(function(use)
       }
   })
 end)
-
-
