@@ -8,6 +8,7 @@ vim.api.nvim_set_keymap('n', 'sp'          , ':sp<CR>', opts) -- split the tab h
 vim.api.nvim_set_keymap('n', 'tn'          , ':tabnew<CR>', opts) -- navigate to new tab
 vim.api.nvim_set_keymap('n', 'tk'          , ':TablineBufferNext<CR>', opts) -- navigate to next tab
 vim.api.nvim_set_keymap('n', 'tj'          , ':TablineBufferPrevious<CR>', opts) -- navigate to previous tab
+vim.api.nvim_set_keymap('n', '<C-w>'       , ':bd<CR>', opts) -- navigate to previous tab
 vim.api.nvim_set_keymap('n', 'to'          , ':tabo<CR>', opts) -- only one tab
 vim.api.nvim_set_keymap('n', '<C-S>'       , ':%s/', opts) -- find and replace
 vim.api.nvim_set_keymap('n', '<leader>t'   , ':sp<CR> :terminal<CR> i', opts) -- open terminal
@@ -17,7 +18,11 @@ vim.api.nvim_set_keymap('n', '<C-d>'       , '<C-d>zz', opts) -- to esc with jk
 vim.api.nvim_set_keymap('n', '<C-u>'       , '<C-u>zz', opts) -- to esc with jk
 vim.api.nvim_set_keymap('n', '<C-N>'       , ':NvimTreeToggle<CR>', opts) -- remap Ctrl+n for using the mapping for nvim-tree
 vim.api.nvim_set_keymap('n', '<C-Z>'       , ':ZenMode<CR>', opts) -- remap Ctrl+k for using zen mode
-vim.api.nvim_set_keymap('n', 'lg'          , ':LazyGit<CR>', opts) -- remap Ctrl+k for using zen mode
+vim.api.nvim_set_keymap('n', 'lg'          , ':LazyGit<CR>', opts) -- remap lg for using lazygit
+vim.api.nvim_set_keymap('n', '<C-_>'       , ':Commentary<CR>', opts) -- remap Ctrl + / for commenting in normal mode
+vim.api.nvim_set_keymap('v', '<C-_>'       , ':Commentary<CR>', opts) -- remap Ctrl + / for commenting in visual mode
+vim.api.nvim_set_keymap('n', '<C-c>'       , ':yank<CR>', opts) -- remap Ctrl + c for copying in normal mode
+vim.api.nvim_set_keymap('v', '<C-c>'       , ':yank<CR>', opts) -- remap Ctrl + c for copying in visual mode
 
 -- vim keybinding movement through the buffer
 vim.api.nvim_set_keymap('n', '<C-L>', '<C-W><C-L>', opts) -- Go Left
