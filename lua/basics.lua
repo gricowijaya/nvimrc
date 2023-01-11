@@ -25,10 +25,8 @@ vim.o.numberwidth               = 5
 vim.o.termguicolors             = true
 vim.o.encoding                  = 'UTF-8'
 vim.o.showmode                  = false
-vim.o.showtabline               = 2 -- set tabline to 2
+vim.o.showtabline               = 0 -- set tabline to 2
 vim.o.signcolumn                = 'yes'
 vim.o.mouse                     = 'a' -- settings for mouse
 vim.o.clipboard                 = 'unnamedplus' -- for using the yank to the clipboard
 vim.o.t_Co                      = 256
--- colorscheme
-vim.cmd([[colorscheme onedark]])

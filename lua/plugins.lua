@@ -16,7 +16,7 @@ return require('packer').startup(function(use)
   }
   use { "nvim-telescope/telescope-file-browser.nvim" }
   -- colorschemes
-  use 'rafi/awesome-vim-colorschemes'
+  use 'navarasu/onedark.nvim'
   -- discord presence
   use 'andweeb/presence.nvim'
   -- lsp config
@@ -49,6 +49,10 @@ return require('packer').startup(function(use)
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
+  use {
+    'kdheepak/tabline.nvim',
+    requires = { { 'hoob3rt/lualine.nvim', opt = true }, {'kyazdani42/nvim-web-devicons', opt = true} }
+  }
   use({
     'folke/noice.nvim',
     requires = {
@@ -60,4 +64,5 @@ return require('packer').startup(function(use)
       'rcarriga/nvim-notify',
       }
   })
+  -- use 'zbirenbaum/copilot.lua'
 end)
