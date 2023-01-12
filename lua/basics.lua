@@ -30,3 +30,18 @@ vim.o.signcolumn                = 'yes'
 vim.o.mouse                     = 'a' -- settings for mouse
 vim.o.clipboard                 = 'unnamedplus' -- for using the yank to the clipboard
 vim.o.t_Co                      = 256
+
+if vim.fn.has("wsl") then
+    vim.g.clipboard = {
+        name = "clip.exe (Copy Only)",
+        copy = {
+            ["+"] = "clip.exe",
+            ["*"] = "clip.exe"
+        },
+        paste = {
+            ["+"] = "clip.exe",
+            ["*"] = "clip.exe"
+        },
+        cache_enabled = true
+    }
+end
