@@ -21,8 +21,6 @@ vim.api.nvim_set_keymap('n', '<C-Z>'       , ':ZenMode<CR>', opts) -- remap Ctrl
 vim.api.nvim_set_keymap('n', 'lg'          , ':LazyGit<CR>', opts) -- remap lg for using lazygit
 vim.api.nvim_set_keymap('n', '<C-_>'       , ':Commentary<CR>', opts) -- remap Ctrl + / for commenting in normal mode
 vim.api.nvim_set_keymap('v', '<C-_>'       , ':Commentary<CR>', opts) -- remap Ctrl + / for commenting in visual mode
-vim.api.nvim_set_keymap('n', '<C-c>'       , ':yank<CR>', opts) -- remap Ctrl + c for copying in normal mode
-vim.api.nvim_set_keymap('v', '<C-c>'       , ':yank<CR>', opts) -- remap Ctrl + c for copying in visual mode
 
 -- vim keybinding movement through the buffer
 vim.api.nvim_set_keymap('n', '<C-L>', '<C-W><C-L>', opts) -- Go Left
