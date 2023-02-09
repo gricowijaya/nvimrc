@@ -65,5 +65,5 @@ return require('packer').startup(function(use)
       }
   })
   -- use 'zbirenbaum/copilot.lua'
-  use 'ThePrimeagen/vim-be-good'
+  -- use 'ThePrimeagen/vim-be-good'
 end)
