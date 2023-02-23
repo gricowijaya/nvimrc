@@ -49,10 +49,7 @@ return require('packer').startup(function(use)
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
-  use {
-    'kdheepak/tabline.nvim',
-    requires = { { 'hoob3rt/lualine.nvim', opt = true }, {'kyazdani42/nvim-web-devicons', opt = true} }
-  }
+  -- nicer ui for nvim
   use({
     'folke/noice.nvim',
     requires = {
@@ -64,8 +61,13 @@ return require('packer').startup(function(use)
       -- 'rcarriga/nvim-notify',
       }
   })
-  use 'sunjon/shade.nvim'
-  use 'edluffy/hologram.nvim'
+  -- tabline
+  -- use {
+  --   'kdheepak/tabline.nvim',
+  --   requires = { { 'hoob3rt/lualine.nvim', opt = true }, {'kyazdani42/nvim-web-devicons', opt = true} }
+  -- }
+  -- copilot
   -- use 'zbirenbaum/copilot.lua'
+  -- simple games
   -- use 'ThePrimeagen/vim-be-good'
 end)
